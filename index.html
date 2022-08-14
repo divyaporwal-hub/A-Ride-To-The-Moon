@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="game">
+        <div class="over-msg ki">GAME OVER !</div>
+        <!-- <div class="la ki ko">Press Ctrl + R to continue</div> -->
+        <div class="new-msg ki">New High Score !!</div>
+        <button class="start-btn laa">Click here to start </button>
+
+
+
+        
+        <audio id="run-audio" src="run.mp3" loop autoplay></audio>
+        <!-- <audio id="game-audio" src="music.mp3" loop autoplay></audio> -->
+        <audio id="game-audio" src="music.mp3" loop autoplay></audio>
+        <audio id="game-over" src="game-over.mp3" ></audio> 
+        <audio id="high-audio" src="high.mp3" loop ></audio>
+        <audio id="shout-audio" src="horse-out.mp3"></audio> 
+
+        <audio id="jump-audio" src="horse-jump-1.mp3"></audio> 
+        <img src="zebra1.gif" class="character">
+        <img class="enemy" src="rat.gif"/> 
+        <img class="enemy0" src="mons.gif"/> 
+        <img class="high-gif" src="falling-star.gif"/>  
+        <div class="moon"><img src="moon.png"></div> 
+        <img src="star.gif" class="star">
+        <img class="tree" src="gold-tree.png">
+        <img class="tree2" src="tree2.png">
+        <img class="tree1" src="white-tree.png">
+        <img class="cloud" src="cloud1.png" alt="">
+    </div>
+    <br>
+    <div class="result">
+        <div> <i onclick="musicoff()" class="fas fa-music f1"></i>
+        <span>
+        <i onclick="voldown()"  class="fas fa-volume-up f2"></i>
+        <i onclick="vol()" class="fas fa-volume-mute f3"></i>
+        </span></div>
+        <div class="switch">
+            <span onclick="charChangetop()"><img class="pink" src="pinky.gif" style="transform: scaleX(-1);" alt=""></span>
+            <span onclick="charChangetoz()"><img class="zebrie" src="zebra1.gif" alt=""></span>
+        </div>
+        <h2 class="score"></h2><br>
+
+        <div class="switch1">
+            <span onclick="charChangetoEasy()"><h2 class="easy">easy</h2></span>
+            <span onclick="charChangetoDiffi()"><h2 class="diffi">hard</h2></span>
+        </div>
+        <h2 class="high-score" ></h2>
+        <i class="far fa-trash-alt"></i>        
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+*
+{
+    margin: 0;
+    text-transform: uppercase;
+    user-select: none;
+    z-index: 10;
+}
+body{
+    background: linear-gradient(to right,rgb(1, 47, 51),rgb(10, 10, 10));
+    z-index: 10;
+    min-height: 432px;
+    overflow: hidden;
+}
+.game
+{
+    border: 2px solid black;
+    height: 90%;
+    width: auto;
+    cursor: pointer;
+    background-color: rgb(10, 0, 7);
+    position: relative;
+    overflow: hidden;
+}
+.moonie
+{
+    top: -10000%;
+    position: absolute;
+    right: -90%;
+}
+.character
+{
+    position: relative;
+    height: 100%;
+}
+.character 
+{
+    width: 300px;
+    z-index:10000012;
+    height: 300px;
+    position: absolute;
+    top: calc(100% - 265px);
+}
+.anime
+{
+    animation: jump 2s linear;
+}
+@keyframes jump
+{
+    0%,100%
+    {
+        top: calc(100% - 240px);
+    }
+    30%,80%
+    {
+        top: calc(100% - 400px);
+    }
+}
+.result
+{
+    display: flex;
+    width: 100%;
+    line-height: 100%;
+    margin-top: -6px;
+    align-items: center;
+    justify-content: space-between;
+}
+h2
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(13, 243, 239);
+    text-align: center;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+span h2
+{
+    text-transform: capitalize;
+    font-weight: normal;
+
+}
+.levels
+{
+    margin-left: -50px;
+}
+.high-score
+{
+    text-align: left;
+}
+.enemy
+{
+    width: 150px;
+    height: 80px;
+    transform: scaleX(-1);
+    z-index:10000012;
+    position: absolute;
+    left: calc(100% + 150px);
+    bottom: -20px;
+    animation: attack 2.5s linear infinite;
+    animation-delay: 3s;
+}
+.enemy1
+{
+    width: 100px;
+    height: 78px;
+    transform: scaleX(1);
+    z-index:10000012;
+    position: absolute;
+    left: calc(100% + 350px);
+    bottom: -10px;
+    animation: attack 2.36s linear infinite;
+    animation-delay: 2.9s;
+}
+@keyframes attack
+{
+    0%
+    {
+        left: calc(100% + 150px);
+    }
+    100%
+    {
+        left: -150px;
+    }
+}
+.over-msg
+{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    z-index: 1000;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: xx-large;
+    color: rgb(252, 11, 11);
+    animation: large 3s ease-in-out infinite;
+}
+@keyframes large{
+    0%,100%{
+        font-size: 2.5em;
+    }
+    50%{
+        font-size: 1.5em;
+    }
+}
+.la
+{
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,120%);
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: rgba(3, 59, 61, 0.89);
+}
+.laa
+{
+    text-align: center;
+    position: absolute;
+    z-index: 100000000;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 7px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,120%);
+    font-family: sans-serif;
+    font-weight: 1000;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0px 0px 10px white,
+    0px 0px 15px rgba(255, 255, 255, 0.782),
+    0px 0px 20px rgba(255, 255, 255, 0.539),
+    0px 0px 25px rgba(255, 255, 255, 0.301),;
+    /* background-color: rgb(103 200 205); */
+    background-color: transparent;
+    color: rgb(33 82 82 / 89%);
+    border: 3px solid rgb(33 82 82 / 89%);
+}
+.new-msg
+{
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-130%);
+    font-family: cursive;
+    font-weight: 1000;
+    font-size: 60px;
+    color: rgb(255, 0, 200);
+    animation: large1 3s ease-in-out infinite;
+}
+@keyframes large1{
+    0%,100%{
+        font-size: 2.1em;
+        filter: hue-rotate(0deg),blur(20px);
+    }
+    50%{
+        font-size: 1.5em;
+        filter: hue-rotate(360deg);
+    }
+}
+.ki
+{
+    display: none;
+    z-index: 10000020;
+}
+.far
+{
+    padding: 2px;
+    color:rgb(249, 249, 252) ;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.fas
+{
+    padding: 2px;
+    color:rgb(3, 255, 230) ;
+    font-size: 23px;
+    outline: none;
+    line-height: 100%;
+    border: none;
+    margin-right: 5px;
+    margin-top: -20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.f3,.f2{
+    display: none;
+}
+.f3
+{
+    color: white;
+}
+.moon
+{
+    position: absolute;
+    top: -105%;
+    z-index: 10000009;
+    animation: moon 60s linear infinite ;
+}
+@keyframes moon
+{
+    0%{
+        transform: translate(20%,-9%);
+        top: -60%;
+    }
+    100%{
+        transform: translate(-90%,-40%);
+    }
+}
+.cloud
+{
+    z-index: 1000000;
+    opacity: 0.7;
+    position: absolute;
+    top: -130%;
+    width: 300%;
+    background-size: 300%;
+    background-repeat: repeat-x;
+    animation: cloud 50s linear infinite ;
+}
+.star
+{
+    z-index: 1000000;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(-1);
+    left: 0%;
+    visibility: hidden;
+}
+.high-gif
+{
+    z-index: 100000000;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+@keyframes cloud
+{
+    0%{
+    }
+    100%{
+        transform: translatex(-300%);
+    }
+}
+.switch,.switch1
+{
+    position: relative;
+    width: 110px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.switch1
+{
+    width: 170px;
+}
+.switch1 h2
+{
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 7px;
+    font-size: 1.2em;
+
+    /* letter-spacing: 2px; */
+    border-radius: 4px;
+    cursor: pointer;
+}
+.active-level
+{
+    border: 1px solid rgb(8, 175, 180);
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 10px rgb(75, 226, 240),0 0 15px rgb(129, 240, 240);
+
+}
+.enemy0
+{
+    visibility: hidden;
+}
+.pink,.zebrie
+{
+    width: 40px;
+    display: block;
+    height: 40px;
+    margin: 2px;
+    margin-top: -3px;
+    border-radius: 50%;
+    line-height: 100%;
+    cursor: pointer;
+    padding: 2px;
+}
+.pink
+{
+    border: 1px solid rgb(0, 0, 0) ;
+    background-color: rgb(245, 189, 217);
+}
+.zebrie
+{
+    border: 1px solid rgb(247, 191, 219) ;
+    background-color: rgba(3, 3, 3, 0.822);
+}
+.switch span 
+{
+    transition: 300ms;
+}
+.switch span:hover
+{
+    margin-top: -10px;
+}
+.tree
+{
+    z-index: 10000010;
+    display: block;
+    position: absolute;
+    bottom: -21px;
+    right: -250px;
+    height: 57%;
+    /* opacity: 1.5; */
+    animation: cloud1 44s linear infinite ;
+    /* animation-delay: -8s; */
+}
+.tree2
+{
+    z-index: 10000010;
+    display: block;
+    position: absolute;
+    bottom: -29px;
+    right: -250px;
+    height: 57%;
+    animation: cloud1 25s linear infinite ;
+    animation-delay: 1200s;
+}
+.tree1
+{
+    z-index: 10000010;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: -550px;
+    height: 53%;
+    animation: cloud2 25s linear infinite ;
+    animation-delay: 18s;
+}
+@keyframes cloud1 
+{
+    0%
+    {
+        right: -550px;
+    }
+    100%{
+        right: 250%;
+    }
+}
+@keyframes cloud2
+{
+    0%
+    {
+        right: -350px;
+    }
+    100%{
+        right: 250%;
+        transform: scale(1.4);
+    }
+}
